@@ -35,7 +35,8 @@ nav ul {
   background: #fff;
   border: 1px solid teal;
   padding: 30px;
-  text-align: center;
+  margin: 100px auto;
+  
   
 }
 .Modal p {
@@ -49,6 +50,8 @@ nav ul {
   padding: 10px 5px;
   border-radius: 50px;
   outline: teal;
+  color: teal;
+  font-weight: 700;
 }
 .form-btn {
   text-align: center;
