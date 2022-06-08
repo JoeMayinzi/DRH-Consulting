@@ -1,4 +1,53 @@
+@import url("/css/main.css");
+
 body {
-    background: teal;
-    color: white;
+    margin: 0;
+    padding: 0;
+    background: #f0f1f3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.form-content {
+    display: block;
+    width: 500px;
+    margin: 20px auto;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 10px 5px 5px #fff;
+}
+
+.form-content  h3 {
+    color: teal;
+    font-weight: bold;
+    text-align: center;
+}
+form label {
+    color: teal;
+    font-weight: 700;
+}
+
+form input {
+  width: 100%; 
+  padding: 15px 0; 
+  margin-bottom: 5px;
+}
+
+form textarea {
+    width: 100%;
+}
+
+.form-btn-container{
+    text-align: center;
+}
+
+.form-btn-container button {
+    margin-left: 20px;
+}
+
+.text-error {
+    color: red;
 }
