@@ -12,28 +12,18 @@ const check = () =>{
 
 
 
-formElement.addEventListener("submit", Event => {
-    Event.preventDefault()
-    const formData = new FormData(formElement)
+formElement.addEventListener("click", Event => {
+    Event.preventDefault();
+    const formData = new FormData(formElement);
+    const entries = formData.entries();
+    const entriesObject = Object.fromEntries(entries);
+    const entriesObjectJson = JSON.stringify(entriesObject);
     
-    for(let key of formData.keys()){
-        console.log(key, formData.get(key))
-    }
-
-    try {
-        
-        fetch("https://restapi.fr/api/article", {
-            method : "POST",
-            body : formData
-        }).then((Response) => {
-            Response.json()
-        }).then((data)=>{
-            console.log(data)
-        })
-
-    } catch(error) {
-        console.error(error)
-    }
-    check()
+    fetch("https://restapi.fr/api/posts", {
+        method : "POST",
+        body : entriesObjectJson,
+        headers : {
+            "Content-Type" : "application/json"
+        }
+    })
 })
-

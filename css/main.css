@@ -55,14 +55,15 @@ nav ul {
 }
 
 .Modal {
+  position: absolute;
   width: 300px;
-  height: 100%;
+  top: 0;
+  left: 40%;
   background: #fff;
   border: 1px solid teal;
   padding: 30px;
   margin: 100px auto;
-  
-  
+  transition: .3s;
 }
 .Modal p {
   color: teal;
@@ -71,12 +72,19 @@ nav ul {
 
 .Modal .form-group input {
   width: 100%;
+  margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px 5px;
   border-radius: 50px;
   outline: teal;
   color: teal;
   font-weight: 700;
+}
+
+.passWrong {
+
+  color: red;
+  margin-bottom: 5px;
 }
 .form-btn {
   text-align: center;

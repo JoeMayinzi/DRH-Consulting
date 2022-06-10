@@ -3,18 +3,22 @@ const popup = document.querySelector(".Modal");
 const form = document.querySelector("form");
 const passwordInput = document.querySelector("form input");
 const password = 123456789;
+const passWrong = document.querySelector("form span");
 
-
-popup.style.display = "none"
+popup.style.display = "none";
 
 const Modal = () => {
     popup.style.display = "block";
     form.addEventListener("submit", (e)=>{
-        e.preventDefault()
+        e.preventDefault();
         if (passwordInput.value == password) {
             location.assign("http://127.0.0.1:5500/admin/admin.html");
         } else {
-           location.assign("http://127.0.0.1:5500/index.html?") 
+            passWrong.innerText = "Mopt de passe Incorrect";
+
+            setTimeout(() => { 
+                location.assign("http://127.0.0.1:5500/index.html?");
+            }, 1000);
         }
         console.log(passwordInput.value)
 
@@ -24,6 +28,6 @@ const Modal = () => {
 }
 
 createArticleLink.addEventListener("click", event => {
-    event.preventDefault()
-    Modal()
+    event.preventDefault();
+    Modal();
 })
